@@ -163,9 +163,14 @@ function App() {
           <label>Amount
             <input type="number" value={nftAmount} onChange={e => setNftAmount(e.target.value)} />
           </label>
-          <label>Price in ANIME
-            <input type="text" value={animePrice} onChange={e => setAnimePrice(e.target.value)} />
-          </label>
+          <label>TOTAL listing price in ANIME
+  <input
+    type="text"
+    placeholder="Total amount for the full bundle"
+    value={animePrice}
+    onChange={e => setAnimePrice(e.target.value)}
+  />
+</label>
           <button onClick={listNFT} style={{ padding: '0.5rem', backgroundColor: '#111', color: 'white', borderRadius: '6px', cursor: 'pointer' }}>
             List TCG
           </button>
