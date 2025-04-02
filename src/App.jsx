@@ -3,7 +3,7 @@ import { ethers } from 'ethers'
 
 // Replace with your deployed contract addresses
 const ESCROW_CONTRACT = '0xbc18ca6620409aa97ec85b6cd8b9f90a8c124114'
-const TCG_TOKEN_CONTRACT = '0x87983e46B33783Eea3e51d4ab2fc937Ac73D4290'
+const TCG_TOKEN_CONTRACT = '0xc27cE0A37721db61375AF30c5b2D9Ca107f73264'
 
 const escrowAbi = [
   'function createEscrow(address nftContract, uint256 nftID, uint256 nftAmount, uint256 animeAmountInWei) public',
