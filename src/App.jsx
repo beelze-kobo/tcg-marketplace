@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { ethers } from 'ethers'
 
-// Update with your actual contract addresses
+// Replace with your deployed contract addresses
 const ESCROW_CONTRACT = '0xbc18ca6620409aa97ec85b6cd8b9f90a8c124114'
-const TCG_TOKEN_CONTRACT = '0xc27cE0A37721db61375AF30c5b2D9Ca107f73264'
+const TCG_TOKEN_CONTRACT = '0x87983e46B33783Eea3e51d4ab2fc937Ac73D4290'
 
 const escrowAbi = [
   'function createEscrow(address nftContract, uint256 nftID, uint256 nftAmount, uint256 animeAmountInWei) public',
@@ -26,7 +26,6 @@ function App() {
   const [walletAddress, setWalletAddress] = useState('')
   const [connected, setConnected] = useState(false)
   const [listings, setListings] = useState([])
-  const [nftID, setNftID] = useState('1')
   const [nftAmount, setNftAmount] = useState('1')
   const [animePrice, setAnimePrice] = useState('0.01')
 
@@ -81,7 +80,8 @@ function App() {
       await tx.wait()
     }
 
-    const tx = await escrow.createEscrow(TCG_TOKEN_CONTRACT, nftID, nftAmount, priceInWei)
+    // Hardcoded token ID = 1
+    const tx = await escrow.createEscrow(TCG_TOKEN_CONTRACT, 1, nftAmount, priceInWei)
     await tx.wait()
     fetchListings()
   }
@@ -141,7 +141,6 @@ function App() {
 
   return (
     <div style={{ padding: '2rem', maxWidth: '600px', margin: '0 auto' }}>
-      {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
         <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>TCG Marketplace</h1>
         {!connected ? (
@@ -158,13 +157,9 @@ function App() {
         )}
       </div>
 
-      {/* Listing Form */}
       <div style={{ marginTop: '2rem' }}>
         <h2 style={{ fontWeight: 'bold' }}>List Your TCG Item</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <label>NFT ID
-            <input type="number" value={nftID} onChange={e => setNftID(e.target.value)} />
-          </label>
           <label>Amount
             <input type="number" value={nftAmount} onChange={e => setNftAmount(e.target.value)} />
           </label>
@@ -177,7 +172,6 @@ function App() {
         </div>
       </div>
 
-      {/* Listings */}
       <div style={{ marginTop: '3rem' }}>
         <h2 style={{ fontWeight: 'bold' }}>Live Listings</h2>
         <button onClick={fetchListings} style={{ marginBottom: '1rem' }}>🔄 Refresh</button>
