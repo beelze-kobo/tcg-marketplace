@@ -114,7 +114,7 @@ body {
 }
 
 .disconnect-btn {
-  background: #eee;
+  background: #c1bcbc;
   font-size: 0.75rem;
 }
 
@@ -124,12 +124,12 @@ body {
 }
 
 .buy-btn {
-  background-color: #198754;
+  background-color: #2f00ff;
   color: white;
 }
 
 .cancel-btn {
-  background-color: #dc3545;
+  background-color: #fc00bd;
   color: white;
   margin-left: 0.5rem;
 }
