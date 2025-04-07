@@ -216,7 +216,7 @@ input {
 
 button:focus,
 input:focus {
-  outline: 1px solid #ff146e; /* 💖 use any color you like */
+  outline: 1px solid #fc00bd; /* 💖 use any color you like */
   outline-offset: 0px;
-  border-color: #ff146e;       /* optional: match border too */
+  border-color: #fc00bd;       /* optional: match border too */
 }
