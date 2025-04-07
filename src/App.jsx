@@ -29,7 +29,7 @@ function App() {
   const [connected, setConnected] = useState(false)
   const [listings, setListings] = useState([])
   const [nftAmount, setNftAmount] = useState('1')
-  const [animePrice, setAnimePrice] = useState('0.01')
+  const [animePrice, setAnimePrice] = useState('')
   const [userBalance, setUserBalance] = useState(0)
 
   useEffect(() => {
