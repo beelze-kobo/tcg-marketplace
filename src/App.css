@@ -14,6 +14,7 @@
   padding: 2rem;
   background: rgba(255, 255, 255, 0.90); /* 0.85 = 85% opaque */
   border-radius: 12px;
+  color: black;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -105,6 +106,8 @@ h1 {
 
 body {
   overflow-y: auto;
+  color: black;
+  background-color: white;
 }
 
 
@@ -219,4 +222,11 @@ input:focus {
   outline: 1px solid #fc00bd; /* 💖 use any color you like */
   outline-offset: 0px;
   border-color: #fc00bd;       /* optional: match border too */
+}
+
+input,
+button {
+  background-color: white;
+  color: black;
+  border-color: #ccc;
 }
