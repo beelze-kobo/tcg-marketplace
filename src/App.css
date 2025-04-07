@@ -213,3 +213,10 @@ input {
   border-radius: 6px;
   margin-bottom: 0.5rem;
 }
+
+button:focus,
+input:focus {
+  outline: 1px solid #ff146e; /* 💖 use any color you like */
+  outline-offset: 0px;
+  border-color: #ff146e;       /* optional: match border too */
+}
