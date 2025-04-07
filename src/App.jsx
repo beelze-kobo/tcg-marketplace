@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { ethers } from 'ethers'
 import './App.css'
 
-const ESCROW_CONTRACT = '0xbC18cA6620409AA97Ec85b6Cd8B9F90A8c124114'
+const ESCROW_CONTRACT = '0xaca2a472cf899b27849b1f0fd1f98673d064d908'
 const TCG_TOKEN_CONTRACT = '0xc27cE0A37721db61375AF30c5b2D9Ca107f73264'
 const FIXED_VIDEO_URL = 'https://static-content.azuki.com/assets/alpha-deck-square.webm'
 
